@@ -1,0 +1,38 @@
+# Project: testclient_gcc
+# Makefile created by Dev-C++ 4.9.9.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = client.o ../common/testclient.o ../../src/persistence/CPstream.o ../../src/socketTrans/socketTransportImpl.o $(RES)
+LINKOBJ  = client.o ../common/testclient.o ../../src/persistence/CPstream.o ../../src/socketTrans/socketTransportImpl.o $(RES)
+LIBS =  -L"D:/software/Dev-Cpp/lib" "../../../../../../software/Microsoft Visual Studio/VC98/Lib/WS2_32.LIB"  
+INCS =  -I"D:/software/Dev-Cpp/include"  -I"D:/app/develop/src/oorpc/src"  -I"D:/app/develop/src/oorpc/src/persistence"  -I"D:/app/develop/src/oorpc/src/socketTrans" 
+CXXINCS =  -I"D:/software/Dev-Cpp/include/c++/3.3.1"  -I"D:/software/Dev-Cpp/include/c++/3.3.1/mingw32"  -I"D:/software/Dev-Cpp/include/c++/3.3.1/backward"  -I"D:/software/Dev-Cpp/lib/gcc-lib/mingw32/3.3.1/include"  -I"D:/software/Dev-Cpp/include"  -I"D:/app/develop/src/oorpc/src"  -I"D:/app/develop/src/oorpc/src/persistence"  -I"D:/app/develop/src/oorpc/src/socketTrans" 
+BIN  = testclient_gcc.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before testclient_gcc.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "testclient_gcc.exe" $(LIBS)
+
+client.o: client.cpp
+	$(CPP) -c client.cpp -o client.o $(CXXFLAGS)
+
+../common/testclient.o: ../common/testclient.cpp
+	$(CPP) -c ../common/testclient.cpp -o ../common/testclient.o $(CXXFLAGS)
+
+../../src/persistence/CPstream.o: ../../src/persistence/CPstream.cpp
+	$(CPP) -c ../../src/persistence/CPstream.cpp -o ../../src/persistence/CPstream.o $(CXXFLAGS)
+
+../../src/socketTrans/socketTransportImpl.o: ../../src/socketTrans/socketTransportImpl.cpp
+	$(CPP) -c ../../src/socketTrans/socketTransportImpl.cpp -o ../../src/socketTrans/socketTransportImpl.o $(CXXFLAGS)

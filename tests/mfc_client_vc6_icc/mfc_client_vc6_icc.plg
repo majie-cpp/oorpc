@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: mfc_client_vc6_icc - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/mfc_client_vc6_icc.res" /d "_DEBUG" /d "_AFXDLL" "D:\app\develop\src\oorpc\tests\mfc_client_vc6_icc\mfc_client_vc6_icc.rc"" 
+Creating temporary file "D:\Profiles\a21072\LOCALS~1\Temp\RSP13A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "..\..\src\persistence" /I "..\..\src\socketTrans" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /Fp"Debug/mfc_client_vc6_icc.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\app\develop\src\oorpc\src\persistence\CPstream.cpp"
+"D:\app\develop\src\oorpc\tests\mfc_client_vc6_icc\mfc_client_vc6_icc.cpp"
+"D:\app\develop\src\oorpc\tests\mfc_client_vc6_icc\mfc_client_vc6_iccDlg.cpp"
+"D:\app\develop\src\oorpc\src\socketTrans\socketTransportImpl.cpp"
+"D:\app\develop\src\oorpc\tests\mfc_client_vc6_icc\StdAfx.cpp"
+]
+Creating command line "xicl6.exe @D:\Profiles\a21072\LOCALS~1\Temp\RSP13A.tmp" 
+Creating temporary file "D:\Profiles\a21072\LOCALS~1\Temp\RSP13B.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/mfc_client_vc6_icc.pdb" /debug /machine:I386 /out:"Debug/mfc_client_vc6_icc.exe" /pdbtype:sept 
+.\Debug\CPstream.obj
+.\Debug\mfc_client_vc6_icc.obj
+.\Debug\mfc_client_vc6_iccDlg.obj
+.\Debug\socketTransportImpl.obj
+.\Debug\StdAfx.obj
+.\Debug\mfc_client_vc6_icc.res
+]
+Creating command line "xilink6.exe @D:\Profiles\a21072\LOCALS~1\Temp\RSP13B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+CPstream.cpp
+icl: warning: problem with Microsoft compilation of 'D:\app\develop\src\oorpc\src\persistence\CPstream.cpp'
+mfc_client_vc6_icc.cpp
+mfc_client_vc6_iccDlg.cpp
+socketTransportImpl.cpp
+StdAfx.cpp
+Linking...
+xilink6: executing 'D:\software\MICROS~3\VC98\Bin\link.exe'
+
+
+
+<h3>Results</h3>
+mfc_client_vc6_icc.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

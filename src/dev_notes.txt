@@ -1,0 +1,31 @@
+* Pending issues
+===================
+$$1. Server side mem leak caused by the ref() of returned value
+$$2. exception handling on proxy side.
+$$3. Remove IN, OUT semantic
+$$4. byte order convertion.
+$$5. Crash when running again and again. Cause: should use multithreaded run-time lib.
+$$6. Mem leak can be seen.
+$$7. Unicode support.
+$$8. NULL pointer support
+$$9. returned pointer of Non-primitive type
+$$10. gcc, VS2005 porting.
+
+$$ means: has been resolved or achieved.
+
+
+Notes:
+======
+1. Should use multithreaded run-time lib if thread is used.
+2. RTTI option must be supported by the compiler.
+3. To compile the source together with MFC:
+
+ * The precompiled headers option must be set to "Automatic use of precompiled headers".
+ * The winsock2 supported option must be selected while creating the application. Otherwise the mfc socket initialization code and afxsock.h must be added manually.
+
+4. While working with MFC socket, the socket recv is sometimes hung due to more than 1 recv(..) calling in CSocket::OnReceive(..) handler, which might result in FD_READ event missing. Refer to socket common issue on MSDN: Q185728, Q245434.
+To work around this, the MFC socket server use WSAAsyncSelect(..) rather than CSocket to receive asynchronous socket event.
+
+5. WSAAsyncSelect(..) still does not work as expected in case where 2 recv(..) calling are made againest 1 FD_READ message. 
+Implemented AsyncSelector to fully resolve this issue: launch a underlying thread to monitor the specified socket, post WND message to the host window whenever any socket event occurs.
+

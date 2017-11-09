@@ -1,0 +1,70 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: testclient - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "D:\Profiles\path\LOCALS~1\Temp\RSP75.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GR /GX /ZI /Od /I "..\..\src\persistence" /I "..\..\src\socketTrans" /I "..\..\src" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /FR"Debug/" /Fp"Debug/testclient.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\app\develop\test\oorpc\tests\testclient_vc6_icc\client.cpp"
+"D:\app\develop\test\oorpc\src\persistence\CPstream.cpp"
+"D:\app\develop\test\oorpc\src\socketTrans\socketTransportImpl.cpp"
+"D:\app\develop\test\oorpc\tests\common\testclient.cpp"
+]
+Creating command line "xicl6.exe @D:\Profiles\path\LOCALS~1\Temp\RSP75.tmp" 
+Creating temporary file "D:\Profiles\path\LOCALS~1\Temp\RSP76.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Ws2_32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/testclient.pdb" /debug /machine:I386 /out:"Debug/testclient.exe" /pdbtype:sept 
+.\Debug\client.obj
+.\Debug\CPstream.obj
+.\Debug\socketTransportImpl.obj
+.\Debug\testclient.obj
+]
+Creating command line "xilink6.exe @D:\Profiles\path\LOCALS~1\Temp\RSP76.tmp"
+<h3>Output Window</h3>
+Compiling...
+client.cpp
+icl: warning: problem with Microsoft compilation of 'D:\app\develop\test\oorpc\tests\testclient_vc6_icc\client.cpp'
+CPstream.cpp
+socketTransportImpl.cpp
+testclient.cpp
+..\..\src\persistence\..\arg.hpp(435): warning #836: explicit specialization of member "Arg<char *, true>::s_iRegisterNo" must precede its first use
+  int Arg <char*,true> ::s_iRegisterNo = 
+                         ^
+
+..\..\src\persistence\..\arg.hpp(435): warning #819: template nesting depth does not match the previous declaration of member "Arg<char *, true>::s_iRegisterNo"
+  int Arg <char*,true> ::s_iRegisterNo = 
+                         ^
+
+..\..\src\persistence\..\arg.hpp(439): warning #836: explicit specialization of member "Arg<void, true>::s_iRegisterNo" must precede its first use
+  int Arg <void,true> ::s_iRegisterNo = 
+                        ^
+
+..\..\src\persistence\..\arg.hpp(439): warning #819: template nesting depth does not match the previous declaration of member "Arg<void, true>::s_iRegisterNo"
+  int Arg <void,true> ::s_iRegisterNo = 
+                        ^
+
+D:\app\develop\test\oorpc\tests\common\testInterface.h(38): warning #1011: missing return statement at end of non-void function "TestInterface::echo6"
+     virtual double * echo6(float* ff, TestArg1 arg, unsigned short* ss, long* ll) {} ; 
+                                                                                    ^
+
+D:\app\develop\test\oorpc\tests\common\testclient.cpp(53): warning #69: integer conversion resulted in truncation
+        str.at(0) = 'Ī';
+                    ^
+
+Linking...
+xilink6: executing 'D:\software\MICROS~3\VC98\Bin\link.exe'
+Creating command line "bscmake.exe /nologo /o"Debug/testclient.bsc"  .\Debug\client.sbr .\Debug\CPstream.sbr .\Debug\socketTransportImpl.sbr .\Debug\testclient.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+testclient.exe - 0 error(s), 7 warning(s)
+</pre>
+</body>
+</html>
